@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding</title>
+    <link rel="stylesheet" href="css.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body class="body">
+	<div class='container'>
+		<div id="colorpicker">
+		  	<div class="a1"><div class="a11"></div></div>
+		  	<div class="a2"><div class="a22"></div></div>
+
+		  	<div class="bars">
+				<div class="r xx"><div class="r22"></div></div>
+				<div class="g xx"><div class="g22"></div></div>
+				<div class="b xx"><div class="b22"></div></div>
+				<div class="box"><h1 class="colorcode">rgba(248,3,3,1)</h1></div>
+			</div>
+		</div>
+		<div id="OP">
+			<div class="ddeg"><div class="dp"><div class="ds">0</div></div></div>
+			<div class="bg">
+				<div class="bgp1 bgp"><div class="bgs1"></div></div>
+				<div class="bgp2 bgp"><div class="bgs2"></div></div>
+				<div class="bgp3 bgp"><div class="bgs3"></div></div>
+				<div class="bgp4 bgp"><div class="bgs4"></div></div>
+			</div>
+			<div class="select">
+				<div>2</div>
+				<div>3</div>
+				<div class="show">4</div>
+				<div>5</div>
+				<div>6</div>
+				<div>7</div>
+				<div>8</div>
+				<div>9</div>
+				<div>10</div>
+			</div>
+			<div class="result"></div>
+		</div>
+		
+		
+		
+		
+		<div class="line">
+		</div>
+		<div id="example">
+			<div class="eee">
+				<div class="LL L1"></div>
+				<div class="tt t1">linear-gradient(to bottom left, rgba(129, 251, 184,1), rgba(40, 199, 111,1))</div>
+			</div>
+			<div class="eee">
+				<div class="LL L2"></div>
+				<div class="tt t1">linear-gradient(to top left, rgba(254, 182, 146,1), rgba(234, 84, 85,1))</div>
+			</div>
+			<div class="eee">
+				<div class="LL L3"></div>
+				<div class="tt t1">linear-gradient(to top left, rgba(171, 220, 255,1), rgba(3, 150, 255,1))</div>
+			</div>
+			<div class="eee">
+				<div class="LL L4"></div>
+				<div class="tt t1">linear-gradient(to top left, rgba(246, 206, 236,1), rgba(217, 57, 205,1))</div>
+			</div>
+			<div class="eee">
+				<div class="LL L5"></div>
+				<div class="tt t1">linear-gradient( 135deg, rgba(240, 95, 87) 10%, rgba(54, 9, 64) 100%)</div>
+			</div>
+			<div class="eee">
+				<div class="LL L6"></div>
+				<div class="tt t1">linear-gradient( 118deg, rgb(255, 255, 0) 10%, rgb(255, 0, 92) 100%)</div>
+			</div>
+			<div class="eee">
+				<div class="LL L7"></div>
+				<div class="tt t1">linear-gradient( 135deg, rgb(255, 31, 0) 0%, rgb(189, 0, 255) 100%)</div>
+			</div>
+			<div class="eee">
+				<div class="LL L8"></div>
+				<div class="tt t1">linear-gradient( 136deg, rgb(66, 255, 0) 0%, rgb(87, 109, 226) 100%)</div>
+			</div>
+			<div class="eee">
+				<div class="LL L9"></div>
+				<div class="tt t1">linear-gradient( 134deg, rgb(254, 254, 129) 0%, rgb(0, 133, 255) 100%)</div>
+			</div>
+			<div class="eee">
+				<div class="LL L10"></div>
+				<div class="tt t1">linear-gradient( 135deg, rgba(240, 95, 87) 10%, rgba(54, 9, 64) 100%)</div>
+			</div>
+			<div class="eee">
+				<div class="LL L11"></div>
+				<div class="tt t1">linear-gradient( 135deg, rgb(255, 138, 0) 38%, rgb(198, 0, 18) 100%)</div>
+			</div>
+			<div class="eee">
+				<div class="LL L12"></div>
+				<div class="tt t1">linear-gradient( 135deg, rgb(199, 159, 112) 21%, rgb(83, 0, 0) 100%)</div>
+			</div>
+			<div class="eee">
+				<div class="LL L13"></div>
+				<div class="tt t1">linear-gradient( 135deg, rgb(112, 199, 153) 20%, rgb(0, 76, 13) 100%)</div>
+			</div>
+			<div class="eee">
+				<div class="LL L14"></div>
+				<div class="tt t1">linear-gradient( 135deg, rgb(0, 66, 61) 0%, rgb(140, 255, 234) 100%)</div>
+			</div>
+			<div class="eee">
+				<div class="LL L15"></div>
+				<div class="tt t1">linear-gradient( 135deg, rgb(224, 124, 102) 0%, rgb(61, 67, 99) 100%)</div>
+			</div>
+			<div class="eee">
+				<div class="LL L16"></div>
+				<div class="tt t1">linear-gradient( 135deg, rgb(37, 0, 121) 0%, rgb(198, 122, 210) 100%)</div>
+			</div>
+			
+		</div>
+		
+</div>
+	
+<script>
+/*255 turn in to 2letters
+function oth(c) {
+	var hex = c.toString(16);
+	return hex.length == 1 ? "0" + hex : hex;
+	//$(".box").css("background", "#"+oth(rcode)+oth(gcode)+oth(bcode));
+}	//$(".colorcode").text("#"+oth(rcode)+oth(gcode)+oth(bcode));
+*/
+	function setuprgb() {
+		var b1pl =$(".a11").position().left;
+		var b1pt =$(".a11").position().top;
+		var b2pt =$(".a22").position().top;
+		var rcolor = Math.round($(".r22").position().left);
+		var gcolor = $(".g22").position().left;
+		var bcolor = $(".b22").position().left;
+		var www = Math.round($(".r").width());
+		var www1 = Math.round($(".a1").width());
+		var rp = Math.round(rcolor/www*100);
+		var gp = Math.round(gcolor/www*100);
+		var bp = Math.round(bcolor/www*100);
+		var rcode = Math.round(rcolor/www*255);
+		var gcode = Math.round(gcolor/www*255);
+		var bcode = Math.round(bcolor/www*255);
+		if (b2pt <= 42.5) {
+			var rrr = (255 - b1pt);
+			var ggg = rrr*(1-b1pl/www1);
+			var bbb1 = b2pt*6;
+			var bbb = (bbb1+(255-bbb1)*(1-b1pt/255)*(1-b1pl/www1)-bbb1*b1pt/255);
+
+			$(".a1").css("background", "linear-gradient(90deg, white, rgb(255,0,"+Math.round(bbb)+"))");
+		}
+
+		if (  b2pt > 42.5 && b2pt <= 85 ) {
+			var bbb = (255 - b1pt);
+			var ggg = bbb*(1-b1pl/www1);
+			var rrr1 = (b2pt-42.5)*6;
+			var rrr2 = 255-rrr1; //Descending while box2 y increasing
+			var rrr = (255-rrr1+(255-rrr2)*(1-b1pt/255)*(1-b1pl/www1)-rrr2*b1pt/255);
+
+			$(".a1").css("background", "linear-gradient(90deg, white, rgb("+Math.round(rrr2)+",0,255))");
+		}
+		if (  b2pt > 85 && b2pt <= 127.5 ) {
+			var bbb = (255 - b1pt);
+			var rrr = bbb*(1-b1pl/www1);
+			var ggg1 = (b2pt-85)*6;
+			var ggg = (ggg1+(255-ggg1)*(1-b1pt/255)*(1-b1pl/www1)-ggg1*b1pt/255);
+
+			$(".a1").css("background", "linear-gradient(90deg, white, rgb(0,"+Math.round(ggg1)+",255))");
+		}
+		if (  b2pt > 127.5 && b2pt <= 170 ) {
+			var ggg = 255 - b1pt;
+			var rrr = ggg*(1-b1pl/www1);
+			var bbb1 = (b2pt-127.5)*6;
+			var bbb2 = 255-bbb1; //Descending while box2 y increasing
+			var bbb = (255-bbb1+(255-bbb2)*(1-b1pt/255)*(1-b1pl/www1)-bbb2*b1pt/255);
+
+			$(".a1").css("background", "linear-gradient(90deg, white, rgb(0,255,"+Math.round(bbb1)+"))");
+		}
+		if (  b2pt > 170 && b2pt <= 212.5 ) {
+			var ggg = 255 - b1pt;
+			var bbb = ggg*(1-b1pl/www1);
+			var rrr1 = (b2pt-170)*6;
+			var rrr = (rrr1+(255-rrr1)*(1-b1pt/255)*(1-b1pl/www1))-rrr1*b1pt/255;
+
+			$(".a1").css("background", "linear-gradient(90deg, white, rgb("+Math.round(rrr1)+",255,0))");
+		}
+		if (  b2pt > 212.5 && b2pt <= 255 ) {
+			var rrr = 255 - b1pt;
+			var bbb = rrr*(1-b1pl/www1);
+			var ggg1 = (b2pt-212.5)*6;
+			var ggg2 = 255-ggg1; //Descending while box2 y increasing
+			var ggg = (255-ggg1+(255-ggg2)*(1-b1pt/255)*(1-b1pl/www1)-ggg2*b1pt/255);
+
+			$(".a1").css("background", "linear-gradient(90deg, white, rgb(255,"+Math.round(ggg2)+",0))");
+		}
+		var rrrZ = rrr/255*100;
+		var gggZ = ggg/255*100;
+		var bbbZ = bbb/255*100;
+		//red green and blue position
+		$(".r22").css("left", rrrZ+"%");
+		$(".g22").css("left", gggZ+"%");
+		$(".b22").css("left", bbbZ+"%");
+		// red green and blue setup text
+		$(".box").css("background", "rgba("+rcode+","+gcode+","+bcode+",1)");
+		$(".colorcode").text("rgba("+rcode+","+gcode+","+bcode+",1)");
+		$(".active > div").css("background", "rgba("+rcode+","+gcode+","+bcode+",1)");
+
+		var deg = (Math.round($(".dp").position().left/$('.ddeg').width()*360));
+		var color = [];
+		var percent = [];
+		var chnum = $('.bg').children().length;
+		for (i=0; i< chnum; i++) {
+			percent[i] = Math.round($('.bg > div').eq(i).position().left/$('.bg').width()*100);
+			color[i] = $('.bg > div').eq(i).children().css('background-color');
+		}
+		var css = "";
+		for (i=0; i<chnum; i++) {
+			css += ', '+color[i]+' '+percent[i]+'%';
+		}
+		$(".bg").css('background', 'linear-gradient('+deg+'deg'+css+')');
+		$('.result').html("background: linear-gradient("+deg+"deg"+css+")");
+	}
+
+	function rgbbutton() {
+		var rcolor = $(".r22").position().left;
+		var gcolor = $(".g22").position().left;
+		var bcolor = $(".b22").position().left;
+		var www = Math.round($(".r").width());
+		var www1 = Math.round($(".a1").width());
+		var rp = Math.round(rcolor/www*100);
+		var gp = Math.round(gcolor/www*100);
+		var bp = Math.round(bcolor/www*100);
+		var rcode = Math.round(rcolor/www*255);
+		var gcode = Math.round(gcolor/www*255);
+		var bcode = Math.round(bcolor/www*255);
+
+		if ((rcolor > bcolor) && (bcolor > gcolor)) {
+			var yb1 = (www-rcolor);
+			var xb1 = www1 - (gcolor/(www-yb1)*www1);
+			var yb2 = -1*((rcolor-bcolor)-www);
+			var setB2 = yb2/6;
+			$(".a1").css("background", "linear-gradient(90deg, white, rgb(255,0,"+Math.round(yb2)+"))");
+		  /*var yb2 = (255*(bcolor-255+xb1+yb1)-(xb1*yb1))/((xb1*(255-yb1))/255);
+			var setB2 = Math.round((42.5*((yb2/255)))*10)/10;*/
+		}
+		//2set BOX2 from 42.5 to 85 position
+		if ((bcolor > rcolor) && (rcolor > gcolor)) {
+			var yb1 = www-bcolor;
+			var xb1 = www1 - ((gcolor/(www-yb1))*www1);
+			var yb2 = (bcolor-rcolor);
+			var setB2 = 42.5 + yb2/6;
+			$(".a1").css("background", "linear-gradient(90deg, white, rgb("+Math.round(yb2)+",0,255))");
+		}
+		//3set BOX2 from 85 to 127.5 position
+		if ((bcolor > gcolor) && (gcolor > rcolor)) {
+			var yb1 = www-bcolor;
+			var xb1 = www1 - ((rcolor/(www-yb1))*www1);
+			var yb2 = -1*((bcolor-gcolor)-www);
+			var setB2 = 85 + yb2/6;
+			$(".a1").css("background", "linear-gradient(90deg, white, rgb(0,"+Math.round(yb2)+",255))");
+		}
+		//4set BOX2 from 127.5 to 170 position
+		if ((gcolor > bcolor) && (bcolor > rcolor)) {
+			var yb1 = www-gcolor;
+			var xb1 = www1 - ((rcolor/(www-yb1))*www1);
+			var yb2 = (gcolor-bcolor);
+			var setB2 = 127.5 + yb2/6;
+			$(".a1").css("background", "linear-gradient(90deg, white, rgb(0,255,"+Math.round(yb2)+"))");
+		}
+		//5set BOX2 from 170 to 212.5 position
+		if ((gcolor > rcolor) && (rcolor > bcolor)) {
+			var yb1 = www-gcolor;
+			var xb1 = www1 - ((bcolor/(www-yb1))*www1);
+			var yb2 = -1*((gcolor-rcolor)-www);
+			var setB2 = 170 + yb2/6;
+			$(".a1").css("background", "linear-gradient(90deg, white, rgb("+Math.round(yb2)+",255,0))");
+		}
+		//5set BOX2 from 212.5 to 255 position
+		if ((rcolor > gcolor) && (gcolor > bcolor)) {
+			var yb1 = www-rcolor;
+			var xb1 = www1 - ((bcolor/(www-yb1))*www1);
+			var yb2 = (rcolor-gcolor);
+			var setB2 = 212.5 + yb2/6;
+			$(".a1").css("background", "linear-gradient(90deg, white, rgb(255,"+Math.round(yb2)+",0))");
+		}
+		////BOX2 0 position and 255 position
+		if ((rcolor > bcolor) && (gcolor == bcolor)) {
+			var yb1 = www-rcolor;
+			var xb1 = www1-((gcolor/(www-yb1))*www1);
+			var setB2 = 0;
+			$(".a1").css("background", "linear-gradient(90deg, white, rgb(255,0,0))");
+		}
+		////BOX2 42.5 position
+		if ((rcolor > gcolor) && (rcolor == bcolor)) {
+			var yb1 = www-rcolor;
+			var xb1 = www1-((gcolor/(www-yb1))*www1);
+			var setB2 = 42.5;
+			$(".a1").css("background", "linear-gradient(90deg, white, rgb(255,0,255))");
+		}
+		////BOX2 85 position
+		if ((bcolor > gcolor) && (rcolor == gcolor)) {
+			var yb1 = www-bcolor;
+			var xb1 = www1-((gcolor/(www-yb1))*www1);
+			var setB2 = 85;
+			$(".a1").css("background", "linear-gradient(90deg, white, rgb(0,0,255))");
+		}
+		////BOX2 127.5 position
+		if ((bcolor > rcolor) && (bcolor == gcolor)) {
+			var yb1 = www-bcolor;
+			var xb1 = www1-((rcolor/(www-yb1))*www1);
+			var setB2 = 127.5;
+			$(".a1").css("background", "linear-gradient(90deg, white, rgb(0,255,255))");
+		}
+		////BOX2 170 position
+		if ((gcolor > rcolor) && (rcolor == bcolor)) {
+			var yb1 = www-gcolor;
+			var xb1 = www1-((rcolor/(www-yb1))*www1);
+			var setB2 = 170;
+			$(".a1").css("background", "linear-gradient(90deg, white, rgb(0,255,0))");
+		}
+		////BOX2 212.5 position
+		if ((rcolor > bcolor) && (rcolor == gcolor)) {
+			var yb1 = www-gcolor;
+			var xb1 = www1-((bcolor/(www-yb1))*www1);
+			var setB2 = 212.5;
+			$(".a1").css("background", "linear-gradient(90deg, white, rgb(255,255,0))");
+		}
+
+		/*a11 a22 position*/
+		$(".a11").css("left", xb1/www1*100+"%");
+		$(".a11").css("top", (yb1/255*100)+"%");
+		$(".a22").css("top", setB2);
+
+		$(".box").css("background", "rgba("+rcode+","+gcode+","+bcode+",1)");
+		$(".colorcode").text("rgba("+rcode+","+gcode+","+bcode+",1)");
+		$(".active > div").css("background", "rgba("+rcode+","+gcode+","+bcode+",1)");
+		linear();
+	}
+
+	$( ".r22, .g22, .b22" ).draggable({
+		containment: ".r",
+		distance: 0,
+		refreshPositions: true,
+		axis: "x",
+		drag: function(event, ui) {
+			/*fixed over dargable -1 256*/
+			var divPos = ui.position.left;
+			if (divPos < 0) {
+				ui.position.left = 0;
+			} else if (divPos > $(this).parent().width()) {
+				ui.position.left = $(this).parent().width();
+			}
+			rgbbutton();
+		},
+		stop: function() {
+			var offset = $(this).position().left;
+			var percent = offset/$(this).parent("div").width()*100;
+			$(this).css('left', percent + '%');
+		},
+	});
+
+	$(".r, .g, .b").click(function(e) {
+		var X = (e.pageX - this.offsetLeft)/$(this).width()*100;
+		$(this).children('div').css( "left", X+"%");
+		rgbbutton();
+	});
+
+
+	$( ".a11" ).draggable({
+		containment: '.a1',
+		distance: 1,
+		refreshPositions: true,
+		drag: function(event) {
+			setuprgb();
+		},
+		stop: function() {
+			var offset1 = $(this).position().left;
+			var offset2 = $(this).position().top;
+			var percent1 = Math.round(offset1/$('.a1').width()*100);
+			var percent2 = Math.round(offset2/$('.a1').height()*100);
+			$(this).css({"left" : ""+percent1+"%", "top" : ""+percent2+"%"});
+		},
+	});		
+	$(".a1").click(function(e) {
+		var X = (e.pageX - this.offsetLeft)/$(this).width()*100;
+		var Y = (e.pageY - this.offsetTop)/255*100;
+		$(this).children('div').css( "left", X+"%");
+		$(this).children('div').css( "top", Y+"%");
+		setuprgb();
+	});
+	$( ".a22" ).draggable({
+		containment: '.a2',
+		distance: 1,
+		refreshPositions: true,
+		axis: "y",
+		drag: function(event) {
+			setuprgb();
+		},
+		stop: function() {
+			var offset = $(this).position().top;
+			var percent = Math.round(offset/$('.a2').height()*100);
+			$(this).css('top', percent + '%');
+		},
+	});	
+	$(".a2").click(function(e) {
+		var Y = (e.pageY - this.offsetTop)/255*100;
+		$(this).children('div').css( "top", Y+"%");
+		setuprgb();
+	});	
+
+	/*DEG*/	
+	$( ".dp" ).draggable({
+		containment: '.ddeg',
+		distance: 1,
+		refreshPositions: true,
+		axis: "x",
+		drag: function(event) {
+			var th = $(this);
+			linear(th);
+			var offsetL = $(".dp").position().left;
+			var deg = (Math.round(offsetL/$('.ddeg').width()*360));
+			$('.ds').text(deg);
+		},
+		stop: function() {
+			var offset = $(this).position().left;
+			var percent = Math.round(offset/$('.ddeg').width()*100);
+			$(this).css('left', percent + '%');
+		},
+	});
+	$( ".ddeg" ).click(function(e) {
+		var th = $(this).children();
+		linear(th);
+		var X = (e.pageX - this.offsetLeft)/$(this).width()*100;
+		$(this).children().css('left', X + '%');
+		var offset = $(this).children().position().left;
+		var deg = (Math.round(offset/$('.ddeg').width()*360));
+		$('.ds').text(deg);
+	});
+	
+	function linear(th = $('.none')) {
+		/**swapping positions color arrows**/
+		/*dragging arrow add background and positions to colors bars*/
+		if (th.hasClass('bgp')) {
+			var active = $(th).position().left;
+			$(th).siblings().removeClass('active');
+			$(th).addClass('active');
+
+			if ($(".active").next().length > 0)  {
+				var next = $(".active").next().position().left;
+			}
+			if ($(".active").prev().length > 0)  {
+				var prev= $(".active").prev().position().left;
+			}
+
+			$('.p2').html(active);
+			if (active > next) {
+				$(".active").next().after($(".active"));
+			}
+			if (active < prev) {
+				$(".active").prev().before($(".active"));
+			}
+
+			var set = $(th).children().css("background-color");
+			var set1 = set.replace("(","," );
+			var set2 = set1.replace(")"," " );
+			var set3 = set2.split(",");
+			var w = $('.r').width();
+
+			/*set red green blue circle*/
+			$('.r22').css({"left": set3[1]/255*100+"%"});
+			$('.g22').css({"left": set3[2]/255*100+"%"});
+			$('.b22').css({"left": set3[3]/255*100+"%"});
+
+			/*set background for box*/
+			$('.box').css("background", set);
+
+			/*set color a1 a2*/
+			rgbbutton();
+		}
+		var deg = (Math.round($(".dp").position().left/$('.ddeg').width()*360));
+		/*color data*/
+		var color = [];
+		var percent = [];
+		var chnum = $('.bg').children().length;
+		for (i=0; i< chnum; i++) {
+			percent[i] = Math.round($('.bg > div').eq(i).position().left/$('.bg').width()*100);
+			color[i] = $('.bg > div').eq(i).children().css('background-color');
+		}
+		var css = "";
+		for (i=0; i<chnum; i++) {
+			css += ', '+color[i]+' '+percent[i]+'%';
+		}
+		$(".bg").css('background', 'linear-gradient('+deg+'deg'+css+')');
+		$('.result').html("background: linear-gradient("+deg+"deg"+css+")");
+	}	
+	/*dragg for color our*/
+	function drag() {
+		$( ".bgp1, .bgp2, .bgp3, .bgp4, .bgp5, .bgp6, .bgp7, .bgp8, .bgp9, .bgp10" ).draggable({
+			containment: '.bg',
+			distance: 1,
+			refreshPositions: true,
+			axis: "x",
+			drag: function(event) {
+				var th = $(this);
+				linear(th);
+				var offset = $(this).position().left;
+				var percent = Math.round(offset/$('.bg').width()*100);
+			},
+		});
+	}
+	drag();
+	$( ".bgp1, .bgp2, .bgp3, .bgp4, .bgp5, .bgp6, .bgp7, .bgp8, .bgp9, .bgp10" ).click(function() {
+		$(this).siblings().removeClass("active");
+		$(this).addClass("active"); 
+		var th = $(this);
+		linear(th);
+	});
+	
+	/*Number of div 10*/
+	var count = 0;
+	$('.select > div').on("click", function() {
+		if (count == 0) {
+			$('.select > div').addClass('show'); 
+			count++;
+		} else {
+			$('.select > div').removeClass('show');
+			$(this).addClass('show');
+			count = 0; 
+			var num = $(this).html();
+			$('.bg').children().remove();
+			var bars = "";
+			for (i=0; i<num; i++) {
+				bars += "<div class='bgp"+(i+1)+" bgp' ><div class='bgs"+(i+1)+" '></div></div>";
+			}
+			$('.bg').html(bars);
+			/*show difference*/
+			var th = $( ".dp" );
+			linear(th);
+			/*reactive dragg*/
+			drag();
+		}
+	});
+
+	
+</script>
+</body>
+    
+
+
+</html>
+      
